@@ -11,7 +11,7 @@ import Foundation
 struct FirstDomain: Equatable {
     struct State: Equatable {
         var push = false
-        var secondState: SecondDomain.State?
+        var secondState = SecondDomain.State()
     }
 
     enum Action: Equatable {
@@ -23,19 +23,13 @@ struct FirstDomain: Equatable {
     }
 
     static let reducer = Reducer<State, Action, Environment>.combine(
-        SecondDomain.reducer.optional()
+        SecondDomain.reducer
             .pullback(state: \.secondState,
                       action: /Action.secondState,
                       environment: { _ in SecondDomain.Environment() }),
         Reducer  { state, action, _ in
             switch action {
             case .push(let push):
-                if push {
-                    state.secondState = SecondDomain.State()
-                } else {
-                    state.secondState = nil
-                }
-
                 state.push = push
                 return .none
             case .secondState(let action):

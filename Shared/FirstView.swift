@@ -17,11 +17,10 @@ struct FirstView: View {
                 VStack {
                     NavigationLink(
                         destination:
-                            IfLetStore(
-                                store.scope(
+                            SecondView(
+                                store: store.scope(
                                     state: \.secondState,
-                                    action: FirstDomain.Action.secondState),
-                                then: SecondView.init(store:)),
+                                    action: FirstDomain.Action.secondState)),
                         isActive: viewStore.binding(
                             get: \.push,
                             send: FirstDomain.Action.push)) {

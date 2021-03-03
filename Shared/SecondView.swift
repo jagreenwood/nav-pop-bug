@@ -16,10 +16,11 @@ struct SecondView: View {
             VStack {
                 NavigationLink(
                     destination:
-                        Text("Pushed").onAppear {
+                        Text("Pushed")
+                        .onAppear {
                             viewStore.send(.loading(true))
                         }) {
-                    Text("Push me")
+                    Text("Tap me")
                 }
 
                 NavigationLink(
