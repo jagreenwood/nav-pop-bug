@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,11 +13,6 @@
 		3F16B98225F034C000ADAE86 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16B96D25F034BE00ADAE86 /* FirstView.swift */; };
 		3F16B98325F034C000ADAE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F16B96E25F034C000ADAE86 /* Assets.xcassets */; };
 		3F16B98425F034C000ADAE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F16B96E25F034C000ADAE86 /* Assets.xcassets */; };
-		3F16B98E25F034F100ADAE86 /* FirstDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16B98D25F034F100ADAE86 /* FirstDomain.swift */; };
-		3F16B98F25F034F100ADAE86 /* FirstDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16B98D25F034F100ADAE86 /* FirstDomain.swift */; };
-		3F16B99225F03B8800ADAE86 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3F16B99125F03B8800ADAE86 /* ComposableArchitecture */; };
-		3F16B99425F03E9B00ADAE86 /* SecondDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16B99325F03E9B00ADAE86 /* SecondDomain.swift */; };
-		3F16B99525F03E9B00ADAE86 /* SecondDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16B99325F03E9B00ADAE86 /* SecondDomain.swift */; };
 		3F16B99725F03F4300ADAE86 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16B99625F03F4300ADAE86 /* SecondView.swift */; };
 		3F16B99825F03F4300ADAE86 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16B99625F03F4300ADAE86 /* SecondView.swift */; };
 /* End PBXBuildFile section */
@@ -31,8 +26,6 @@
 		3F16B97B25F034C000ADAE86 /* Scratch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scratch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F16B97D25F034C000ADAE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F16B97E25F034C000ADAE86 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		3F16B98D25F034F100ADAE86 /* FirstDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDomain.swift; sourceTree = "<group>"; };
-		3F16B99325F03E9B00ADAE86 /* SecondDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDomain.swift; sourceTree = "<group>"; };
 		3F16B99625F03F4300ADAE86 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F16B99225F03B8800ADAE86 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,10 +60,8 @@
 		3F16B96B25F034BE00ADAE86 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				3F16B98D25F034F100ADAE86 /* FirstDomain.swift */,
 				3F16B96D25F034BE00ADAE86 /* FirstView.swift */,
 				3F16B96C25F034BE00ADAE86 /* ScratchApp.swift */,
-				3F16B99325F03E9B00ADAE86 /* SecondDomain.swift */,
 				3F16B99625F03F4300ADAE86 /* SecondView.swift */,
 				3F16B96E25F034C000ADAE86 /* Assets.xcassets */,
 			);
@@ -121,7 +111,6 @@
 			);
 			name = "Scratch (iOS)";
 			packageProductDependencies = (
-				3F16B99125F03B8800ADAE86 /* ComposableArchitecture */,
 			);
 			productName = "Scratch (iOS)";
 			productReference = 3F16B97325F034C000ADAE86 /* Scratch.app */;
@@ -171,7 +160,6 @@
 			);
 			mainGroup = 3F16B96625F034BE00ADAE86;
 			packageReferences = (
-				3F16B99025F03B8700ADAE86 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 3F16B97425F034C000ADAE86 /* Products */;
 			projectDirPath = "";
@@ -209,9 +197,7 @@
 			files = (
 				3F16B98125F034C000ADAE86 /* FirstView.swift in Sources */,
 				3F16B99725F03F4300ADAE86 /* SecondView.swift in Sources */,
-				3F16B99425F03E9B00ADAE86 /* SecondDomain.swift in Sources */,
 				3F16B97F25F034C000ADAE86 /* ScratchApp.swift in Sources */,
-				3F16B98E25F034F100ADAE86 /* FirstDomain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,9 +207,7 @@
 			files = (
 				3F16B98225F034C000ADAE86 /* FirstView.swift in Sources */,
 				3F16B99825F03F4300ADAE86 /* SecondView.swift in Sources */,
-				3F16B99525F03E9B00ADAE86 /* SecondDomain.swift in Sources */,
 				3F16B98025F034C000ADAE86 /* ScratchApp.swift in Sources */,
-				3F16B98F25F034F100ADAE86 /* FirstDomain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,25 +449,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3F16B99025F03B8700ADAE86 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.15.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3F16B99125F03B8800ADAE86 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3F16B99025F03B8700ADAE86 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F16B96725F034BE00ADAE86 /* Project object */;
 }

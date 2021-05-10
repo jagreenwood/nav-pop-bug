@@ -5,29 +5,31 @@
 //  Created by Jeremy Greenwood on 3/3/21.
 //
 
-import ComposableArchitecture
 import SwiftUI
 
+class Observer: ObservableObject {
+    @Published var loading = false
+}
+
 struct SecondView: View {
-    var store: Store<SecondDomain.State, SecondDomain.Action>
+    @ObservedObject var observer: Observer
 
     var body: some View {
-        WithViewStore(store) { viewStore in
-            VStack {
-                NavigationLink(
-                    destination:
-                        Text("Pushed")
-                        .onAppear {
-                            viewStore.send(.loading(true))
-                        }) {
-                    Text("Tap me")
-                }
+        VStack {
+            NavigationLink(
+                destination:
+                    Text("Pushed")
+                    .onAppear {
+                        observer.loading.toggle()
+                    }
+            ) {
+                Text("Tap me")
+            }
 
-                NavigationLink(
-                    destination:
-                        Text("Pushed")) {
-                    Text("Not me")
-                }
+            NavigationLink(
+                destination:
+                    Text("Pushed")) {
+                Text("Not me")
             }
         }
     }
